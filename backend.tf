@@ -1,9 +1,10 @@
 terraform {
   backend "s3" {
-    bucket = "jjtech-ci-cd-terraform"
-    key    = "state/jjtech.tfstate"
+    bucket = "cicd-tf"
+    key    = "state/cicd-JE.tfstate"
     region = "us-west-1"
-    profile = "default"
+    dynamodb_table = "tf-s3-x"
+    profile = "NM-CE"
   }
 }
 
